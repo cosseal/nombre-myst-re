@@ -1,8 +1,4 @@
-function nb_aleatoire(min, max)
-{
-    var nb = min + ( max - min +1 ) * Math.random();
-    return Math.floor(nb);
-}
+
 
 var nb = nb_aleatoire(0,100);
 
@@ -17,33 +13,54 @@ var msg1 = "Incorrect, le nombre est trop haut";
 var msg2 = "Incorrect, le nombre est trop bas";
 var msg3 ="Gagné!";
 
+var btnRejouer = document.getElementById("restart");
+
+
 console.log (nb);
+
+function nb_aleatoire(min, max)
+{
+    var nb = min + ( max - min +1 ) * Math.random();
+    return Math.floor(nb);
+}
+
 
 submit.addEventListener("click", function () {
     var spanStyle = document.createElement("span");
-    nombreEssai--;
 
-    if (nombreUtilisateur.value > nb) {
-        saisie.innerHTML = msg1;
+    if (nombreEssai > 0) {
+        if (nombreUtilisateur.value > nb) {
+            saisie.innerHTML = msg1;
+            spanStyle.style.color = "red";
+            nombreEssai--;
 
-        spanStyle.style.color = "red";
+        } else if (nombreUtilisateur.value < nb){
+            saisie.innerHTML = msg2;
+            spanStyle.style.color = "blue";
+            nombreEssai--;
 
-    } else if (nombreUtilisateur.value < nb){
-        saisie.innerHTML = msg2;
+        }  else if (nombreUtilisateur.value == nb) {
+            saisie.innerHTML = msg3;
+            spanStyle.style.color = "green";
+        }}
+    else
+     {
+        btnRejouer.style.visibility = "visible";
+        btnRejouer.addEventListener("click", function () {
+            window.location.reload();
+            spanStyle.innerHTML="";
+        })};
 
-        spanStyle.style.color = "blue";
 
-    }  else if (nombreUtilisateur.value == nb) {
-        saisie.innerHTML = msg3;
-
-        spanStyle.style.color = "green";
-    }
 
     spanStyle.style.marginLeft = "10px";
     spanStyle.innerHTML = nombreUtilisateur.value;
     utilises.appendChild(spanStyle);
     compteur.innerHTML = "Nombre d'essais restant: " + nombreEssai;
 });
+
+
+
 
 
 

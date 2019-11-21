@@ -6,5 +6,102 @@ body, html {
     width: 100%;
     margin: 0;
     padding: 0;
+    font-family:"helvetica", sans-serif;
+    font-weight: bolder;
+    background:rgba(178, 223, 219,1.0);
+    text-align: center;
+}
+section {
+    width: 90%;
+    margin: auto;
+}
+
+h1 {
+    border: 1px solid black;
+    border-radius: .5em;
+    background: #ff8423;
+    margin: 2% 25%;
+    text-align: center;
+    font-weight: bold;
+    padding: 1% 0%;
+}
+
+h2 {
+    width: 20%;
+    float: left;
+    height: 300px;
+    vertical-align: middle;
 
 }
+
+#regles {
+    float: left;
+    width: 68%;
+    border: 1px solid black;
+    padding:2%;
+    text-align: justify;
+    vertical-align: middle;
+    font-size: small;
+
+}
+
+#entree {
+    float: left;
+    width: 50%;
+    padding: 2% 1%;
+
+}
+
+label {
+    font-weight: bolder;
+}
+input {
+    margin-left: 2%;
+}
+button {
+    font-weight: bold;
+    font-size: large;
+}
+
+#perdu {
+    margin: 0% 20%;
+    float: left;
+    width:55%;
+    height: 50px;
+    border: 1px solid black;
+    padding:  2%;
+    background: darkgray;
+}
+
+h4 {
+    float: left;
+    margin: 2%;
+}
+
+#utilises {
+    float:left;
+    border: 1px solid black;
+    margin: 2% 2%;
+    height: 50px;
+    width:77%;
+}
+
+#essais {
+    float: left;
+    border: 2px solid black;
+    height: 50px;
+    width:80%;
+    background: #ff8423;
+    margin: auto;
+    padding-bottom: 2%;
+}
+
+#restart {
+    visibility: hidden;
+}
+
+
+
+
+
+

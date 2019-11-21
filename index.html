@@ -15,23 +15,39 @@
 
 </head>
 <body>
-<h1>Le nombre mystère</h1>
-<div>
+
+<section>
+    <h1>Le nombre mystère</h1>
+
     <h2>Règles du jeu</h2>
-    <div></div>
-</div>
 
-<div>
+    <div id="regles">
+        <p><strong>Objectif: découvrir le nombre mystère.</strong> </p>
+        <p>Celui-ci est compris entre 0 et 100. Vous avez droit à 10 tentatives maximum.</p>
+        <p>Entrez votre chiffre dans la zone prévue à cet effet.</p>
+        <p>Si ce n'est pas le nombre recherché : il apparaitra en rouge (trop haut) ou
+            en bleu (trop bas).</p>
+        <p>Bon amusement!</p>
+    </div>
 
-        <label for="chiffre">Votre chiffre</label>
+    <div id="entree">
+        <label for="chiffre">Votre nombre</label>
         <input type="number" name ="chiffre" id="chiffre">
         <button id="submit">Envoyer</button>
-</div>
-<div id="perdu"></div>
+    </div>
 
-<div id="utilises">chiffres utilisés</div>
-<div id="essais"></div>
+    <div id="perdu">
 
+    </div>
+    <h4>Nombres utilisés</h4>
+    <div id="utilises"></div>
+    <h4>Nombre de coups</h4>
+    <div id="essais">
+
+    </div>
+
+    <div><button id="restart">Rejouer</button></div>
+</section>
 
 
 
