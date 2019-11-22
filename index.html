@@ -17,36 +17,39 @@
 <body>
 
 <section>
-    <h1>Le nombre mystère</h1>
+    <div class="container">
+        <h1 class="col-sm-12">Le nombre mystère</h1>
 
-    <h2>Règles du jeu</h2>
+        <div id="regles" class="row">
+            <h2 class="col-sm-4">Règles du jeu</h2>
+            <div class="col-sm-8">
+                <p><strong>Objectif: découvrir le nombre mystère.</strong> </p>
+                <p>Celui-ci est compris entre 0 et 100. Vous avez droit à 10 tentatives maximum.</p>
+                <p>Entrez votre chiffre dans la zone prévue à cet effet.</p>
+                <p>Si ce n'est pas le nombre recherché : il apparaitra en rouge (trop haut) ou
+                    en bleu (trop bas).</p>
+                <p>Bon amusement!</p>
+            </div>
+        </div>
 
-    <div id="regles">
-        <p><strong>Objectif: découvrir le nombre mystère.</strong> </p>
-        <p>Celui-ci est compris entre 0 et 100. Vous avez droit à 10 tentatives maximum.</p>
-        <p>Entrez votre chiffre dans la zone prévue à cet effet.</p>
-        <p>Si ce n'est pas le nombre recherché : il apparaitra en rouge (trop haut) ou
-            en bleu (trop bas).</p>
-        <p>Bon amusement!</p>
+        <div id="entree" class="row">
+            <label class="col-sm-2" for="chiffre">Votre nombre</label>
+            <input class="col-sm-4" type="number" name ="chiffre" id="chiffre">
+            <button class="col-sm-2" id="submit">Envoyer</button>
+            <button class= "col-sm-2" id="restart">Rejouer</button>
+        </div>
+
+        <div id="perdu" class="col-sm-12"></div>
+
+        <div class="row" class="ut">
+            <h4 class="col-sm-3">Nombres utilisés</h4>
+            <div class="col-sm-9" id="utilises"></div>
+        </div>
+        <div class="row" class="ut">
+            <h4 class="col-sm-3">Nombre de coups</h4>
+            <div class="col-sm-9" id="essais"></div>
+        </div>
     </div>
-
-    <div id="entree">
-        <label for="chiffre">Votre nombre</label>
-        <input type="number" name ="chiffre" id="chiffre">
-        <button id="submit">Envoyer</button>
-    </div>
-
-    <div id="perdu">
-
-    </div>
-    <h4>Nombres utilisés</h4>
-    <div id="utilises"></div>
-    <h4>Nombre de coups</h4>
-    <div id="essais">
-
-    </div>
-
-    <div><button id="restart">Rejouer</button></div>
 </section>
 
 

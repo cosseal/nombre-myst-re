@@ -24,11 +24,20 @@ function nb_aleatoire(min, max)
     return Math.floor(nb);
 }
 
+function rejouer (spanStyle)
+{
+    btnRejouer.style.visibility = "visible";
+    spanStyle.style.display="none";
+    btnRejouer.addEventListener("click", function () {
+        window.location.reload(); })
+}
+
+
 
 submit.addEventListener("click", function () {
     var spanStyle = document.createElement("span");
 
-    if (nombreEssai > 0) {
+    if (nombreEssai > 0 ) {
         if (nombreUtilisateur.value > nb) {
             saisie.innerHTML = msg1;
             spanStyle.style.color = "red";
@@ -42,14 +51,15 @@ submit.addEventListener("click", function () {
         }  else if (nombreUtilisateur.value == nb) {
             saisie.innerHTML = msg3;
             spanStyle.style.color = "green";
+            rejouer (spanStyle);
         }}
     else
      {
-        btnRejouer.style.visibility = "visible";
-        btnRejouer.addEventListener("click", function () {
-            window.location.reload();
-            spanStyle.innerHTML="";
-        })};
+         rejouer(spanStyle)
+     }
+
+
+
 
 
 
